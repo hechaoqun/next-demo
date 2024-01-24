@@ -12,7 +12,7 @@ module.exports = {
     i18n: {
         defaultLocale: 'en',
         locales: ['en', 'de'],
-        localeDetection: false // 不检测浏览器语言环境
+        // localeDetection: false // 不检测浏览器语言环境
         // defaultNS: 'common',
         // order: ['navigator', 'querystring', 'localStorage'],
         // caches: ['localStorage', 'cookie'],
@@ -31,7 +31,7 @@ module.exports = {
             ? resolveLocalesPath()
             : '/locales',
     // ns: ['common'],
-    reloadOnPrerender: process.env.NODE_ENV === 'development'
+    // reloadOnPrerender: process.env.NODE_ENV === 'development'
     // saveMissing: true, // do not set saveMissing to true for production and also not when using the chained backend
     /**
      * @link https://github.com/i18next/next-i18next#6-advanced-configuration
