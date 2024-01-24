@@ -6,7 +6,7 @@ module.exports = {
     defaultLocale: 'en',
     locales: ['en', 'de'],
   },
-  ...(typeof window === undefined
+  ...(typeof window === "undefined"
     ? { localePath: path.resolve('./public/locales') }
     : {}),
 }
