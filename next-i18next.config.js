@@ -17,19 +17,18 @@ module.exports = {
         // order: ['navigator', 'querystring', 'localStorage'],
         // caches: ['localStorage', 'cookie'],
     },
-    // fallbackLng: {
-    //     default: ['en']
-    // },
-    // interpolation: {
-    //     prefix: '{',
-    //     suffix: '}'
-    // },
-    // localeStructure: '{lng}/{ns}',
+    fallbackLng: {
+        default: ['en']
+    },
+    interpolation: {
+        prefix: '{',
+        suffix: '}'
+    },
+    localeStructure: '{lng}/{ns}',
     /** To avoid issues when deploying to some paas (vercel...) */
-    localePath:
-        typeof window === 'undefined'
-            ? resolveLocalesPath()
-            : '/locales',
+    ...(typeof window === "undefined"
+    ? { localePath: path.resolve('./public/locales') }
+    : {}),
     // ns: ['common'],
     reloadOnPrerender: process.env.NODE_ENV === 'development'
     // saveMissing: true, // do not set saveMissing to true for production and also not when using the chained backend
